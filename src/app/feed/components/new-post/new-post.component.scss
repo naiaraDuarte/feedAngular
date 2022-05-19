@@ -1,0 +1,32 @@
+.blank {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.mg-2 {
+    margin: 20px;
+}
+
+.size-input {
+    width: 97%;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white;
+}
+
+::ng-deep .mat-input-element {
+    height: 80% !important; 
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    height: 100% !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    height: 200px;
+}

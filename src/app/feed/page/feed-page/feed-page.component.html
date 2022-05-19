@@ -1,11 +1,13 @@
 <div>
     <app-navbar></app-navbar>
     <div class="row">
-        <div class="col">
-            <!-- Lado de leis -->
+        <div class="col size">
         </div>
-        <div class="col">
-            <!-- <app-new-post></app-new-post> -->
+        <div class="col background">
+            <app-new-post></app-new-post>
+            <div class="posts" *ngFor="let post of listFeedPost" >
+                <app-post [post]="post"></app-post>
+            </div>
         </div>
     </div>
     <!-- <router-outlet></router-outlet> -->
