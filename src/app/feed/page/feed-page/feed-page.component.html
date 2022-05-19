@@ -4,7 +4,7 @@
         <div class="col size">
         </div>
         <div class="col background">
-            <app-new-post></app-new-post>
+            <app-new-post (newPost)="newPost($event)"></app-new-post>
             <div class="posts" *ngFor="let post of listFeedPost" >
                 <app-post [post]="post"></app-post>
             </div>

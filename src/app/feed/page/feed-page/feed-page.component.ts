@@ -16,4 +16,7 @@ export class FeedPageComponent implements OnInit {
     this.service.listPosts().subscribe(data => this.listFeedPost = data);
   }
 
+  newPost (post: Post) {
+    this.listFeedPost.push(post)
+  }
 }

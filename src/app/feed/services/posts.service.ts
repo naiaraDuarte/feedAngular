@@ -14,4 +14,10 @@ export class PostsService {
   listPosts() {
     return this.http.get<Post[]>(this.URL);
   }
+
+  createPost(data: Post) {
+    console.log(data);
+    
+    return this.http.post(this.URL, data);
+  }
 }

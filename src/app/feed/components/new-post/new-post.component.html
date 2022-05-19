@@ -1,6 +1,9 @@
 <div class="blank mg-2">
-    <mat-form-field appearance="outline" class="size-input mg-2">
-        <mat-label>O que você quer compartilhar?</mat-label>
-        <textarea matInput></textarea>
-    </mat-form-field>
+    <form [formGroup]="postForm">
+        <mat-form-field appearance="outline" class="size-input mg-2">
+            <mat-label>O que você quer compartilhar?</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="accent" (click)="save()">Accent</button>
+    </form>
 </div>

@@ -8,19 +8,21 @@ import { FeedPageComponent } from './page/feed-page/feed-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { PostComponent } from './components/post/post.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     NewPostComponent,
     FeedPageComponent,
-    PostComponent
+    PostComponent,
   ],
   imports: [
     CommonModule,
     FeedRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   exports: [HttpClientModule,]
 })
