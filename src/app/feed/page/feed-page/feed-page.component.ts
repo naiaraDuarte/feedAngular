@@ -20,28 +20,27 @@ export class FeedPageComponent implements OnInit {
     this.postForm = this.fb.group({
       description: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(500)]]
     })
+    this.post = new Post();
   }
 
   save (post: FormGroup) {
-    console.log(this.post);
-    
-    // if (this.post.id) {
-    //   this.post.description = post.value.description;
+    if (this.post.id) {
+      this.post.description = post.value.description;
       
-    //   this.service.updatePost(this.post).subscribe(
-    //     success => {
-    //       this.postForm.reset();
-    //       this.post = new Post();
-    //     }
-    //   );
-    // }else {
-    //   this.service.createPost(post.value).subscribe(
-    //     success => {
-    //       this.postForm.reset()
-    //       this.listFeedPost.push(success as Post)
-    //     }
-    //   );
-    // }
+      this.service.updatePost(this.post).subscribe(
+        success => {
+          this.postForm.reset();
+          this.post = new Post();
+        }
+      );
+    }else {
+      this.service.createPost(post.value).subscribe(
+        success => {
+          this.postForm.reset()
+          this.listFeedPost.push(success as Post)
+        }
+      );
+    }
   }
 
   selected(post: Post) {
