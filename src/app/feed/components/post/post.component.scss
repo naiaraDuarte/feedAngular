@@ -7,6 +7,16 @@
     margin: 20px;
 }
 
-.mg-5 {
-    margin: 50px;
+.pg-5 {
+    padding: 50px;
+}
+
+.alignment-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mr-1 {
+    margin-right: 10px;
 }

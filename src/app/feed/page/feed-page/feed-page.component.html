@@ -4,11 +4,10 @@
         <div class="col size">
         </div>
         <div class="col background">
-            <app-new-post (newPost)="newPost($event)"></app-new-post>
+            <app-new-post (saveEmit)="save($event)" [postForm]="postForm"></app-new-post>
             <div class="posts" *ngFor="let post of listFeedPost" >
-                <app-post [post]="post"></app-post>
+                <app-post [post]="post" (updateEmit)="selected($event)" (deleteEmit)="del($event)"></app-post>
             </div>
         </div>
     </div>
-    <!-- <router-outlet></router-outlet> -->
 </div>

@@ -1,12 +1,13 @@
 <div class="blank mg-2">
-    <div class="mg-5">
+    <div class="pg-5 alignment-center-between">
         <span> {{ post.description }}</span> 
-        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
-            <mat-icon>menu</mat-icon>
-        </button>
+        <div>
+            <button mat-mini-fab color="primary" class="mr-1" aria-label="Example icon button with a menu icon" (click)="update(post)">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" aria-label="Example icon button with a menu icon" (click)="del(post)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
     </div>
-  
 </div>

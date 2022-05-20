@@ -16,8 +16,14 @@ export class PostsService {
   }
 
   createPost(data: Post) {
-    console.log(data);
-    
     return this.http.post(this.URL, data);
+  }
+
+  updatePost(data: Post) {
+    return this.http.put(`${this.URL}/${data.id}`, data);
+  }
+
+  deletePost(id: number) {
+    return this.http.delete(`${this.URL}/${id}`);
   }
 }
